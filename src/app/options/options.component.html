@@ -1,0 +1,13 @@
+<h2>My Options</h2>
+<ul class="options">
+  <li *ngFor="let option of options" >
+    <a routerLink="/detail/{{option.id}}" >
+        <span class="badge">{{option.id}}</span> {{option.name}}
+    </a>
+  </li>
+</ul>
+
+
+
+
+
