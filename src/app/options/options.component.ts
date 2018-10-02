@@ -23,4 +23,18 @@ export class OptionsComponent implements OnInit {
       .subscribe(options => this.options = options);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if  (!name) {return; }
+      this.optionService.addOption({name} as Option)
+        .subscribe(option => {
+          this.options.push(option);
+        });
+  }
+
+  delete(option: Option): void {
+    this.options = this.options.filter(o => o !== option);
+    this.optionService.deleteOption(option).subscribe();
+  }
+
 }

@@ -1,9 +1,22 @@
 <h2>My Options</h2>
+
+<div>
+    <label>Name:
+      <input #optionName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(optionName.value); optionName.value=''">
+      add
+    </button>
+  </div>
+
 <ul class="options">
   <li *ngFor="let option of options" >
     <a routerLink="/detail/{{option.id}}" >
         <span class="badge">{{option.id}}</span> {{option.name}}
     </a>
+    <button class="delete" title="delete option"
+      (click)="delete(option)">x</button>
   </li>
 </ul>
 

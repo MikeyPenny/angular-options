@@ -12,6 +12,7 @@ import { OptionDetailComponent } from './option-detail/option-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OptionSearchComponent } from './option-search/option-search.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     OptionDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    OptionSearchComponent,
   ],
   imports: [
     BrowserModule,

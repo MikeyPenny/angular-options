@@ -1,8 +1,11 @@
 <h3>Top Heroes</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let option of options" class="col-1-4" routerLink="/detail/{{option.id}}">
-    <div class="module options">
+  <a *ngFor="let option of options" class="col-1-4" 
+      routerLink="/detail/{{option.id}}">
+    <div class="module option">
       <h4>{{option.name}}</h4>
     </div>
   </a>
 </div>
+
+<app-option-search></app-option-search>

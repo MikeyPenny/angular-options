@@ -34,4 +34,9 @@ export class OptionDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.optionService.updateOption(this.option)
+      .subscribe(() => this.goBack());
+  }
+
 }
